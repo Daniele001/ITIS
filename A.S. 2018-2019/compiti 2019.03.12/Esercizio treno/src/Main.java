@@ -14,6 +14,6 @@ public class Main {
         Treno treno = new Treno();
         treno.aggiungiVagoneMerci(m);
         treno.aggiungiVagonePasseggeri(v);
-        System.out.println("peso totale del treno: " + treno.calcolaPeso(treno));
+        System.out.println("peso totale del treno: " + treno.calcolaPeso());
     }
 }

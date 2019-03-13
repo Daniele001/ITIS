@@ -18,7 +18,7 @@ public class Treno {
         posizione++;
     }
 
-    public double calcolaPeso(Treno t) {
+    public double calcolaPeso() {
         double pesoTotale = 0;
         for(int pos = 0; pos < posizione; pos++) {
             pesoTotale += treno[pos].getPeso();
