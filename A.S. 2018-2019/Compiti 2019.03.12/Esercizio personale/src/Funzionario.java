@@ -25,15 +25,10 @@ public class Funzionario extends MembroPersonale {
     public void stipendio() {
         int guad = 0;
         if(grado.equals("junior")){
-            for(int i = 0; i < getOre(); i++) {
                 guad += 70 * getOre();
-            }
         }
-        else {
-            for(int i = 0; i < getOre(); i++) {
+        else
                 guad += 80 * getOre();
-            }
-        }
         setGuadagno(guad);
     }
 }

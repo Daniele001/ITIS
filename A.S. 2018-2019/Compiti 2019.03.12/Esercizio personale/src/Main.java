@@ -12,14 +12,15 @@ public class Main {
         f.setGrado();
         f.stipendio();
         System.out.println("inserisci:\n -> codice (numerico)\n -> nome\n -> cognome\n ->" +
-                " anno assunzione\n -> ore\n -> competenza(informatica, telecomunicazioni, elettronica o automazione)");
-        Tecnico t = new Tecnico(k.nextInt(), k.next(), k.next(), k.nextInt(), k.nextInt(), k.next());
+                " anno assunzione\n -> ore\n -> competenza(informatica, telecomunicazioni, elettronica o automazione)" +
+                "\n -> dipendente interno o esterno? (inserisci \"true\" se interno o \"false\" se esterno)");
+        Tecnico t = new Tecnico(k.nextInt(), k.next(), k.next(), k.nextInt(), k.nextInt(), k.next(), k.nextBoolean());
         t.stipendio();
         Progetto p = new Progetto();
 
         p.setMembro(d);
         p.setMembro(f);
         p.setMembro(t);
-        System.out.println(p.costoTot());
+        System.out.println("costo totale dipendenti " + p.costoTot());
     }
 }
