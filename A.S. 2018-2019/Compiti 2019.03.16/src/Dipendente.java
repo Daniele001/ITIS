@@ -1,10 +1,12 @@
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Dipendente {
     private String nominativo;
     private String sesso;
-    private String dataDiNascita;
+    private LocalDate dataDiNascita;
     private double stipendio;
+    private DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     Dipendente(String nominativo, String sesso, String dataDiNascita, double stipendio) {
         setNominativo(nominativo);
@@ -30,10 +32,10 @@ public class Dipendente {
     }
 
     public void setDataDiNascita(String dataDiNascita) {
-        this.dataDiNascita = dataDiNascita;
+        this.dataDiNascita = LocalDate.parse(dataDiNascita, format);
     }
 
-    public String getDataDiNascita() {
+    public LocalDate getDataDiNascita() {
         return dataDiNascita;
     }
 
@@ -46,7 +48,8 @@ public class Dipendente {
     }
 
     public String toString() {
-        return getNominativo() + getSesso() + getDataDiNascita() + getStipendio();
+        return "Nome: " + getNominativo() + "\nSesso: " + getSesso() + "\nData di nascita: "
+                + getDataDiNascita().format(format) + "\nStipendio: " + getStipendio();
     }
 
     @Override

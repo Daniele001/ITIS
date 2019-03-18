@@ -1,5 +1,3 @@
-import java.util.Date;
-
 public class Docente extends Dipendente {
     private int oreDocenza;
 
@@ -18,7 +16,7 @@ public class Docente extends Dipendente {
 
     @Override
     public String toString() {
-        return super.toString() + getOreDocenza();
+        return super.toString() + "\nOre docenza: " +  getOreDocenza();
     }
 
     @Override

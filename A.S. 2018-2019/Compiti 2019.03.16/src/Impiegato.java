@@ -1,5 +1,3 @@
-import java.util.Date;
-
 public class Impiegato extends Dipendente {
     private String livello;
 
@@ -18,7 +16,7 @@ public class Impiegato extends Dipendente {
 
     @Override
     public String toString() {
-        return super.toString() + getLivello();
+        return super.toString() + "\nLivello: "+ getLivello();
     }
 
     @Override
